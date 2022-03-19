@@ -5,7 +5,7 @@ namespace baekjoon.problem.test
     using baekjoon.problem.p1316;
 
     /// <summary>
-    /// �׷� �ܾ� üĿ
+    /// 그룹 단어 체커
     /// </summary>
     /// <author>extremecode716</author>
     /// <see href="http://https://www.acmicpc.net/problem/1316">https://www.acmicpc.net/problem/1316</see>
