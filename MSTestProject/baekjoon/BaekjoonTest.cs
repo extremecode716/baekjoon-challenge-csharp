@@ -44,7 +44,7 @@ namespace baekjoon
             main.Invoke();
             endTime = DateTime.Now;
 
-            Assert.AreEqual(outputStringWriter.ToString().Replace(lineSeparator, "\n"), output + "\n");
+            Assert.AreEqual(output + "\n", outputStringWriter.ToString().Replace(lineSeparator, "\n"));
             LoadOriginInoutAndPrintStream();
         }
 
