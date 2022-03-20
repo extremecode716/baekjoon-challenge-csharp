@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 namespace CodingTest.utils
 {
-    public class Item<T>
+    class Item<T>
     {
         public T Data { get; set; }
+        public int Index { get; set; }
 
         public Item<T> Previous { get; set; }
 
@@ -26,7 +27,7 @@ namespace CodingTest.utils
     /// <summary>
     /// Circular Doubly Linked List.
     /// </summary>
-    public class CircularDoublyLinkedList<T> : IEnumerable<T>
+    class CircularDoublyLinkedList<T> : IEnumerable<T>
     {
         private Item<T> Head;
         private int count;
@@ -55,7 +56,37 @@ namespace CodingTest.utils
 
             Head.Previous.Next = item;
             Head.Previous = item;
+            item.Index = count;
             count++;
+        }
+
+        public Item<T> Get(int index, Item<T> current = null)
+        {
+            current ??= Head;
+
+            bool isRight = index > -1 ? true : false;
+
+            int i = 0;
+            while (true)
+            {
+                if (i == index)
+                {
+                    return current;
+                }
+
+                if (isRight)
+                {
+                    ++i;
+                    current = current.Next;
+                }
+                else
+                {
+                    --i;
+                    current = current.Previous;
+                }
+            }
+
+            return null;
         }
 
         public void Delete(T data)
@@ -142,7 +173,7 @@ namespace CodingTest.utils
             count = 0;
         }
 
-        private void RemoveItem(Item<T> current)
+        public void RemoveItem(Item<T> current)
         {
             current.Next.Previous = current.Previous;
             current.Previous.Next = current.Next;
@@ -155,6 +186,7 @@ namespace CodingTest.utils
 
             Head.Next = Head;
             Head.Previous = Head;
+            Head.Index = count;
             count = 1;
         }
 
@@ -171,5 +203,6 @@ namespace CodingTest.utils
 
         IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)this).GetEnumerator();
     }
+
 
 }
