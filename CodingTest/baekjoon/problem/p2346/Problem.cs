@@ -53,7 +53,7 @@ namespace baekjoon.problem.p2346
         }
     }
 
-    public class Item<T>
+    class Item<T>
     {
         public T Data { get; set; }
         public int Index { get; set; }
@@ -76,7 +76,7 @@ namespace baekjoon.problem.p2346
     /// <summary>
     /// Circular Doubly Linked List.
     /// </summary>
-    public class CircularDoublyLinkedList<T> : IEnumerable<T>
+    class CircularDoublyLinkedList<T> : IEnumerable<T>
     {
         private Item<T> Head;
         private int count;
