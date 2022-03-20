@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace baekjoon.problem.test
+namespace baekjoon.problem.p1316.test
 {
     using baekjoon.problem.p1316;
 

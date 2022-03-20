@@ -59,7 +59,7 @@ namespace baekjoon.problem.p1316
     }
 
     /// <summary>
-    /// Algorithm 클래스는 백준 문제의 Main 클래스로 복사 - 붙여넣기하여 사용합니다.
+    /// Algorithm 클래스는 백준 문제 번호를 이름으로하는 네임스페이스로 복사 - 붙여넣기하여 사용합니다.
     /// </summary>
     /// <author>extremecode716</author>
     /// <see href="https://github.com/extremecode716/baekjoon-challenge-csharp">https://github.com/extremecode716/baekjoon-challenge-csharp</see>
