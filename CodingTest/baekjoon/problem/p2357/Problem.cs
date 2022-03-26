@@ -36,7 +36,7 @@ namespace baekjoon.problem.p2357
             }
 
             // 트리 사이즈 계산 및 배열 할당
-            int depth = (int)Math.Ceiling(Math.Log(N) / Math.Log(2)) + 1;
+            int depth = (int)Math.Ceiling(Math.Log2(N)) + 1;
             int treeSize = (int)Math.Pow(2, depth);
             minSegmentTree = new int[treeSize];
             maxSegmentTree = new int[treeSize];
